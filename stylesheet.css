@@ -14,7 +14,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   /*height: 100vh;*/
-  
+  z-index: -2;
 }
 
 .WeatherBackground{
@@ -67,75 +67,116 @@ body{
 }
 
 #input-container{
-  position: fixed;
-  background-color: rgba(255, 255, 255, .5);
+  position: absolute;
+  /*background-color: rgba(255, 255, 255, .5);*/
   width: 100%;
-  max-width: 400px;
-  height: 100px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top:50%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /*transform: translate(-50%, -50%);*/
+  transition: transform 2s;
+  
 }
 
 #input-form-container{
-  top: 25px;
-  position: relative;
-  width: 100%;
-  max-width: 250px;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: none;
   margin-left: auto;
   margin-right: auto;
-  background-color: none;
+  max-width: 400px;
 }
 
-#user-input{
+#user-input-container-main{
+  background-color: none;
+  width: 75%;
   position: relative;
-  width: 100%;
-  max-width: 250px;
-  padding-left: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  right:12px;
-  background-color: none;
-  font-size: 1em;
-}
-
-#user-input:focus {
-    /*border: 3px solid #555;
-    outline: none;*/
 }
 
 #search-icon{
   position: absolute;
   color: gray;
-  top: 0;
-  left: -5px;
-  padding-top: 5px;
-  padding-right: 0px;
-  padding-left: 0px;
-  background-color: none;
+  top: 5px;
+  left: 5px;
+}
+
+#user-input{
+  width: 85%;
+  font-size: 1em;
+  padding-left: 20px;
+}
+
+#user-input:focus {
+  outline:0;
 }
 
 #submit-button-container{
-  background-color: none;
-  width: 100%;
-  position: absolute;
-  top: 50px;
+  width: 25%;
+  background-color: blue;
 }
 
 #submit-button{
-  width: 120px;
-  /*background-color: rgba(0, 229, 95, 1);*/
+  width: 100%;
+  max-width: 120px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
   background-color: orange;
-  margin-left: auto;
-  margin-right: auto;
+  /*border: 2px solid white;*/
   height: 25px;
   cursor: pointer;
+  color: white;
+ 
 }
 
-#button-text{
-  padding-top: 4px;
-  text-align: center;
+#submit-button:focus {
+  outline:0;
+}
+
+#output-container-main{
+  background-color: rgba(0, 0, 0, .2);
+  width: 100%;
+  max-width: 400px;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   color: white;
+  visibility: hidden;
+}
+
+.OutputContainer{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: none;
+  text-align: center;
+  margin-top: -20px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#city-name{
+  background-color: none;
+  padding: 0;
+}
+
+.OutputFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#current-container{
+  width: 60%;
+}
+
+
+#high-low-container{
+  background-color: none;
 }
