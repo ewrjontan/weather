@@ -59,6 +59,8 @@ function sendRequest(url){
       var humidity = data.main.humidity;
       var conditions = data.weather[0].main;
       var weatherId = data.weather[0].id;
+      var pressure = data.main.pressure;
+      var wind = Math.floor(data.wind.speed);
       
       console.log("Current Temp: " + currentTemp);
       console.log("High: " + tempHigh);
@@ -66,10 +68,12 @@ function sendRequest(url){
       console.log("Humidity: " + humidity);
       console.log("Conditions: " + conditions);
       console.log("weather ID: " + weatherId);
+      console.log("Pressure: " + pressure);
+      console.log("Wind: " + wind);
       
       //weatherBackground(957)
       
-      weatherBackground(cityName, currentTemp, tempHigh, tempLow, humidity, conditions, weatherId)
+      weatherBackground(cityName, currentTemp, tempHigh, tempLow, humidity, conditions, weatherId, pressure, wind)
       
       
     };
@@ -89,7 +93,7 @@ function sendRequest(url){
 };
 
 
-function weatherBackground(cityInput, currentTempInput, highInput, lowInput, humidityInput, conditionsInput, weatherInput){
+function weatherBackground(cityInput, currentTempInput, highInput, lowInput, humidityInput, conditionsInput, weatherInput, pressureInput, windInput){
 	console.log("weather input: " + weatherInput);
   $(".WeatherBackground").css("width", "0%");
   
@@ -134,15 +138,18 @@ function weatherBackground(cityInput, currentTempInput, highInput, lowInput, hum
   
   //Display Weather data
   /*cityInput, currentTempInput, highInput, lowInput, humidityInput, conditionsInput, weatherInput*/
-  $("#output-container-main").css("visibility", "visible");
-  $(".OutputContainer").css("opacity", "1");
+  //$("#output-container-main").css("visibility", "visible");
+  $("#output-container-main").css({"visibility": "visible", "opacity": "1"});
+  //$(".OutputContainer").css("opacity", "1");
       
   $("#city-name").text(cityInput);    
   $("#current-temp").html(currentTempInput + "&#8457");
   $("#current-condition").text(conditionsInput);
   $("#low-temp").html("Low: " + lowInput + "&#8457");
-  $("#humidity").text("Humidity: " + humidityInput + "%");
   $("#high-temp").html("High: " + highInput + "&#8457");
+  $("#humidity").text("Humidity: " + humidityInput + "%");
+  $("#pressure").text("Pressure: " + pressureInput + " hPa");
+  $("#wind").text("Wind Speed: " + windInput + " mph");
   
 }
 
