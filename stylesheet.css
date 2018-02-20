@@ -115,7 +115,7 @@ body{
 
 #submit-button-container{
   width: 25%;
-  background-color: blue;
+  background-color: none;
 }
 
 #submit-button{
@@ -179,4 +179,9 @@ body{
 
 #high-low-container{
   background-color: none;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
