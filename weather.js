@@ -59,8 +59,9 @@ function sendRequest(url){
       var humidity = data.main.humidity;
       var conditions = data.weather[0].main;
       var weatherId = data.weather[0].id;
-      var pressure = data.main.pressure;
+      var pressure = ((data.main.pressure * 0.02953).toString()).substr(0, 4);
       var wind = Math.floor(data.wind.speed);
+      
       
       console.log("Current Temp: " + currentTemp);
       console.log("High: " + tempHigh);
@@ -148,7 +149,7 @@ function weatherBackground(cityInput, currentTempInput, highInput, lowInput, hum
   $("#low-temp").html("Low: " + lowInput + "&#8457");
   $("#high-temp").html("High: " + highInput + "&#8457");
   $("#humidity").text("Humidity: " + humidityInput + "%");
-  $("#pressure").text("Pressure: " + pressureInput + " hPa");
+  $("#pressure").text("Pressure: " + pressureInput + " inHg");
   $("#wind").text("Wind Speed: " + windInput + " mph");
   
 }
