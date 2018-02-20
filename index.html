@@ -30,17 +30,51 @@
     
   </div>
   
+  <!--temp-->
+  <div id="output-container-main">
+    <div class="OutputContainer" id="city-container">
+      <h1 id="city-name"></h1>
+    </div>
+    
+    <div class="OutputContainer OutputFlex" id="current-container">
+      <h3 id="current-temp"></h3>
+      <h3 id="current-condition"></h3>
+    </div>
+    
+    <div class="OutputContainer OutputFlex" id="high-low-container">
+      <p id="low-temp"></p>
+      <p id="humidity">
+      </p>
+      <p id="high-temp"></p>
+    </div>
+    
+    
+  </div>
+  
+  
+  
   <div id="input-container">
-    <form id="input-form-container">
-      <input id="user-input" type="text" placeholder="Enter a U.S. city or zip code">
+    <form id="input-form-container" autocomplete="off">
       
-      <i class="fas fa-search fa-sm" id="search-icon" ></i>
+      <div id="user-input-container-main">
+      
+        <i class="fas fa-search fa-sm" id="search-icon" ></i>
+      
+        <input id="user-input" type="text" placeholder="Enter a U.S. city or zip code" required>
+        </div>
+            
+      
+      
+      <div id="submit-button-container">
+        <input type="submit" name="submit" value="Submit" id="submit-button" />
+      </div>
     </form>
     
-    <div id="submit-button-container">
+    <!--<div id="submit-button-container">
       <div id="submit-button"><p id="button-text">Submit</p>
 </div>
-    </div>
+    </div>-->
+    
   </div>
 </div>  
   </body> 
