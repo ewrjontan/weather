@@ -101,10 +101,10 @@ body{
 }
 
 #search-icon{
-  position: absolute;
+  position: relative;
   color: gray;
-  top: 8px;
-  left: 15px;
+  top: 0px;
+  left: 22px;
 }
 
 #user-input{
