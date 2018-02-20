@@ -103,11 +103,10 @@ body{
 #search-icon{
   position: absolute;
   color: gray;
-  left: 12px;
+  left: 15px;
   background-color: none;
   padding-top: 10px;
   padding-bottom: 8px;
-  padding-right: 5px;
 }
 
 #user-input{
