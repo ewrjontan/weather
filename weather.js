@@ -87,7 +87,13 @@ function sendRequest(url){
   xmlhttp.onloadend = function() {
     if(xmlhttp.status == 404){
     	console.log("Please enter valid input");
-    } ;    
+      
+      //set invalid text for 1s and shake
+      $("#submit-button").effect("shake", {distance:5});
+      $("#user-input").val("Not a valid city or zip code");
+      setTimeout(function(){
+        $("#user-input").val(""); }, 1000);
+    };    
 	};
   
   
@@ -174,9 +180,9 @@ $(document).ready(function(){
     
     if ($userInput != ""){
     	console.log("User Input: " + $userInput);
-    
-    getWeather($userInput); 
-    
+      getWeather($userInput); 
+    }else{
+      $("#submit-button").effect("shake", {distance:5});
     }
   });
   
