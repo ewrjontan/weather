@@ -147,7 +147,7 @@ body{
 #output-container-main{
   background-color: rgba(0, 0, 0, .2);
   width: 100%;
-  max-width: 400px;
+  /*max-width: 400px;*/
   position: absolute;
   top: 20%;
   left: 0;
