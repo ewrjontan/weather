@@ -172,7 +172,7 @@ body{
 
 #city-name{
   background-color: none;
-  padding: 0;
+  padding-top: 15px;
 }
 
 .OutputFlex{
