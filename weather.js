@@ -150,10 +150,10 @@ function weatherBackground(cityInput, currentTempInput, highInput, lowInput, hum
   //$(".OutputContainer").css("opacity", "1");
       
   $("#city-name").text(cityInput);    
-  $("#current-temp").html(currentTempInput + "&#8457");
+  $("#current-temp").html(currentTempInput + "&deg;F");
   $("#current-condition").text(conditionsInput);
-  $("#low-temp").html("Low: " + lowInput + "&#8457");
-  $("#high-temp").html("High: " + highInput + "&#8457");
+  $("#low-temp").html("Low: " + lowInput + "&deg;F");
+  $("#high-temp").html("High: " + highInput + "&deg;F");
   $("#humidity").text("Humidity: " + humidityInput + "%");
   $("#pressure").text("Pressure: " + pressureInput + " inHg");
   $("#wind").text("Wind Speed: " + windInput + " mph");
