@@ -70,6 +70,8 @@ function sendRequest(url){
       //weatherBackground(957)
       
       weatherBackground(cityName, currentTemp, tempHigh, tempLow, humidity, conditions, weatherId)
+      
+      
     };
     
   };
@@ -124,6 +126,9 @@ function weatherBackground(cityInput, currentTempInput, highInput, lowInput, hum
     $("#weather-background-clear").css("width", "100%");
   }
   
+  //clear input
+  $("#user-input").val("");
+  
   //Move input container
   $("#input-container").css("transform", "translateY(100px)");
   
@@ -146,6 +151,12 @@ function weatherBackground(cityInput, currentTempInput, highInput, lowInput, hum
 //getWeather(cityInput);
 
 $(document).ready(function(){
+	$(window).resize(function() {
+  	var width = $(window).width(); 
+  	console.log(width);
+	});
+  
+  
   
 	$("#submit-button").click(function(){
   	//console.log("button clicked");
