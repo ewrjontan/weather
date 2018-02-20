@@ -155,7 +155,9 @@ body{
   margin-left: auto;
   margin-right: auto;
   color: white;
-  visibility: hidden;
+  visibility: hidden;/*hidden for final*/
+  opacity: 0;/*0 for final*/
+  transition: opacity 2s;
 }
 
 .OutputContainer{
@@ -166,29 +168,58 @@ body{
   max-width: 400px;
   background-color: none;
   text-align: center;
-  margin-top: -20px;
-  opacity: 0;
-  transition: opacity 2s;
+  margin-top: 12px;
+  margin-bottom: 15px;
 }
 
 #city-name{
   background-color: none;
-  padding-top: 12px;
+  margin-bottom: 0px;
 }
 
-.OutputFlex{
+#output-container-secondary-flex{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  
+}
+
+.OutputFlexVertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*width: 50%;*/
+  
+  background-color: none;
+  height: 120px;
 }
 
 #current-container{
   width: 60%;
 }
 
-
-#high-low-container{
+#current-temp{
+  font-size: 5em;
   background-color: none;
+  position: relative;
+  margin-top: -10px;
+  margin-bottom: 0px;
+}
+
+#current-condition{
+  position: relative;
+  margin-top: 15px;
+  padding-top: 0px;
+  background-color: none;
+}
+
+#info-container{
+  background-color: none;
+  text-align: left;
+}
+
+#info-container p{
+  background-color: none;
+  margin:0;
 }
 
 input, textarea {
