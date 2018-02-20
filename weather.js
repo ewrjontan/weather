@@ -47,15 +47,15 @@ function sendRequest(url){
       
       //location
       //var zipCode = zip;
-      var city = data.name;
+      var cityName = data.name;
       
       //console.log("Zip Code: " + zipCode);
-      console.log("City: " + city);
+      console.log("City: " + cityName);
       
       //weather
-      var currentTemp = data.main.temp;
-      var tempHigh = data.main.temp_max;
-      var tempLow = data.main.temp_min;
+      var currentTemp = Math.floor(data.main.temp);
+      var tempHigh = Math.floor(data.main.temp_max);
+      var tempLow = Math.floor(data.main.temp_min);
       var humidity = data.main.humidity;
       var conditions = data.weather[0].main;
       var weatherId = data.weather[0].id;
@@ -68,7 +68,8 @@ function sendRequest(url){
       console.log("weather ID: " + weatherId);
       
       //weatherBackground(957)
-      weatherBackground(weatherId)
+      
+      weatherBackground(cityName, currentTemp, tempHigh, tempLow, humidity, conditions, weatherId)
     };
     
   };
@@ -86,7 +87,7 @@ function sendRequest(url){
 };
 
 
-function weatherBackground(weatherInput){
+function weatherBackground(cityInput, currentTempInput, highInput, lowInput, humidityInput, conditionsInput, weatherInput){
 	console.log("weather input: " + weatherInput);
   $(".WeatherBackground").css("width", "0%");
   
@@ -123,6 +124,21 @@ function weatherBackground(weatherInput){
     $("#weather-background-clear").css("width", "100%");
   }
   
+  //Move input container
+  $("#input-container").css("transform", "translateY(100px)");
+  
+  //Display Weather data
+  /*cityInput, currentTempInput, highInput, lowInput, humidityInput, conditionsInput, weatherInput*/
+  $("#output-container-main").css("visibility", "visible");
+  $(".OutputContainer").css("opacity", "1");
+      
+  $("#city-name").text(cityInput);    
+  $("#current-temp").html(currentTempInput + "&#8457");
+  $("#current-condition").text(conditionsInput);
+  $("#low-temp").html("Low: " + lowInput + "&#8457");
+  $("#humidity").text("Humidity: " + humidityInput + "%");
+  $("#high-temp").html("High: " + highInput + "&#8457");
+  
 }
 
 
@@ -130,16 +146,29 @@ function weatherBackground(weatherInput){
 //getWeather(cityInput);
 
 $(document).ready(function(){
+  
 	$("#submit-button").click(function(){
-  	console.log("button clicked");
-    
+  	//console.log("button clicked");
+    event.preventDefault();
     var $userInput = $("#user-input").val();
-    console.log("User Input: " + $userInput);
+    console.log("!!User Input: " + $userInput);
     
-    getWeather($userInput);
+    if ($userInput != ""){
+    	console.log("User Input: " + $userInput);
     
+    getWeather($userInput); 
     
-  })
+    }
+  });
+  
+  /*$("#user-input").keyup(function(e) {
+         if(e.which == 13) {
+             e.preventDefault();
+             console.log('Enter key hit');
+             //$("#submit-button").click();
+          }
+    });*/
+  
 });
 
 
