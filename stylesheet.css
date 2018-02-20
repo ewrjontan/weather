@@ -188,13 +188,12 @@ body{
   flex-direction: column;
   justify-content: space-between;
   /*width: 50%;*/
-  
   background-color: none;
   height: 120px;
 }
 
 #current-container{
-  width: 60%;
+  width: 55%;
 }
 
 #current-temp{
@@ -214,6 +213,7 @@ body{
 
 #info-container{
   background-color: none;
+  width: 45%;
   text-align: left;
 }
 
