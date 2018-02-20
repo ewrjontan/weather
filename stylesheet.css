@@ -31,38 +31,38 @@ body{
 }
 
 #weather-background-extreme{
-  background-image: url("http://wallpaper-gallery.net/images/hd-tornado-wallpaper/hd-tornado-wallpaper-7.jpg");
+  background-image: url("./images/extreme.jpeg");
   width: 0%;
 }
 
 #weather-background-snow{
-  background-image: url("https://wallpapercave.com/wp/9uTVIpA.jpg");
+  background-image: url("./images/snow.jpeg");
 }
 
 #weather-background-storm{
-  background-image: url("http://vunature.com/wp-content/uploads/2017/01/sky-nature-rain-thunderstorm-clouds-storm-lightning-3d-wallpapers-high-resolution-1920x1080.jpg");
+  background-image: url("./images/thunderstorm.jpeg");
 }
 
 #weather-background-rain{
-  background-image: url("https://i.ytimg.com/vi/ZISJpRCtFbk/maxresdefault.jpg");
+  background-image: url("./images/rain.jpeg");
   
 }
 
 #weather-background-haze{
-  background-image: url("https://wallpaperscraft.com/image/city_fires_fog_night_mountains_relief_from_above_63343_1920x1080.jpg");
+  background-image: url("./images/haze.jpeg");
   width: 0%;
 }
 
 #weather-background-cloudy{
-  background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Hi-Res-Cloudy-Sky-1920x1080-PIC-WPC001326.jpg");
+  background-image: url("./images/cloudy.jpeg");
 }
 
 #weather-background-clear{
-  background-image: url("http://deskbg.com/s3/temp/34-3ergtb.jpg");
+  background-image: url("./images/clear.jpeg");
 }
 
 #weather-background-windy{
-  background-image: url("https://static.mopik.net/img/1920x1080/wind_farm_30031_mopik.jpg");
+  background-image: url("./images/windy.jpeg");
   width: 0%;
 }
 
