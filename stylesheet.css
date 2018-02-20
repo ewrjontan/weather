@@ -102,17 +102,17 @@ body{
 
 #search-icon{
   position: absolute;
-  color: gray;
-  left: 15px;
+  color: lightgray;
+  left: 20px;
   background-color: none;
   padding-top: 10px;
   padding-bottom: 8px;
 }
 
 #user-input{
-  width: 85%;
+  width: 80%;
   font-size: 16px;
-  padding-left: 25px;
+  padding-left: 30px;
   height: 30px;
   background-color: none;
 }
