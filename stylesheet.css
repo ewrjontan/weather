@@ -180,7 +180,7 @@ body{
 #output-container-secondary-flex{
   display: flex;
   flex-direction: row;
-  
+  justify-content: space-between;
 }
 
 .OutputFlexVertical{
@@ -193,7 +193,8 @@ body{
 }
 
 #current-container{
-  width: 55%;
+  width: 50%;
+  background-color: none;
 }
 
 #current-temp{
@@ -213,7 +214,6 @@ body{
 
 #info-container{
   background-color: none;
-  width: 45%;
   text-align: left;
 }
 
