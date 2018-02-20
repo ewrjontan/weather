@@ -88,6 +88,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   max-width: 400px;
+  align-items: center;
 }
 
 #user-input-container-main{
@@ -99,7 +100,7 @@ body{
 #search-icon{
   position: absolute;
   color: gray;
-  top: 5px;
+  top: 3px;
   left: 5px;
 }
 
@@ -125,7 +126,7 @@ body{
   background-color: rgba(255, 255, 255, 0);
   background-color: orange;
   /*border: 2px solid white;*/
-  height: 25px;
+  height: 20px;
   cursor: pointer;
   color: white;
  
@@ -184,4 +185,5 @@ body{
 input, textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+  border: none;
 }
