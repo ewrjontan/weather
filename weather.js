@@ -130,7 +130,7 @@ function weatherBackground(cityInput, currentTempInput, highInput, lowInput, hum
   $("#user-input").val("");
   
   //Move input container
-  $("#input-container").css("transform", "translateY(100px)");
+  $("#input-container").css("transform", "translateY(30vh)");
   
   //Display Weather data
   /*cityInput, currentTempInput, highInput, lowInput, humidityInput, conditionsInput, weatherInput*/
