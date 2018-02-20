@@ -34,21 +34,25 @@
   <!--temp-->
   <div id="output-container-main">
     <div class="OutputContainer" id="city-container">
-      <h1 id="city-name"></h1>
+      <h1 id="city-name">Columbia</h1>
     </div>
     
-    <div class="OutputContainer OutputFlex" id="current-container">
-      <h3 id="current-temp"></h3>
-      <h3 id="current-condition"></h3>
-    </div>
-    
-    <div class="OutputContainer OutputFlex" id="high-low-container">
-      <p id="low-temp"></p>
-      <p id="humidity">
-      </p>
-      <p id="high-temp"></p>
-    </div>
-    
+    <div class="OutputContainer" id="output-container-secondary-flex">
+      <div class="OutputFlexVertical" id="current-container">
+        <p id="current-temp">23F</p>
+        <h3 id="current-condition">Thunderstorm</h3>
+      </div>
+
+      <div class="OutputFlexVertical" id="info-container">
+        <p id="low-temp">Low: 16F</p>
+        <p id="high-temp">High: 50F</p>
+        <p id="humidity">Humidity: 80%
+        </p>
+        <p id="pressure">Pressure: 1018 hPa</p>
+        <p id="wind">Wind Speed: 55 mph</p>
+      </div>
+      
+    </div>  
     
   </div>
   
