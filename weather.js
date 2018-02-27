@@ -193,6 +193,14 @@ $(document).ready(function(){
              //$("#submit-button").click();
           }
     });*/
+	
+    $("#submit-button").hover(
+  function() {
+    $( this ).css({"background-color": "white", "color": "orange", "border": "2px solid orange"});
+  }, function() {
+    $( this ).css({"background-color": "orange", "color": "white", "border": "none"});
+  }
+);	
   
 });
 
