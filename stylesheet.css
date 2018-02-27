@@ -16,6 +16,8 @@ body{
   /*height: 100vh;*/
   z-index: -2;
   filter:blur(2px);
+  -webkit-transition: -webkit-filter 2s linear; /* Safari */
+  transition: filter 2s linear;
 }
 
 .WeatherBackground{
