@@ -15,9 +15,9 @@ body{
   justify-content: space-between;
   /*height: 100vh;*/
   z-index: -2;
-  filter:blur(2px);
-  -webkit-transition: -webkit-filter 2s linear; /* Safari */
-  transition: filter 2s linear;
+  /*filter:blur(2px);
+  -webkit-transition: -webkit-filter 2s linear;
+  transition: filter 2s linear;*/
 }
 
 .WeatherBackground{
@@ -99,14 +99,14 @@ body{
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
+  text-align: center;
   min-width: 200px;
 }
 
 #search-icon{
   position: absolute;
   color: #a6a6a6;
-  left: 10px;
+  left: 22px;
   background-color: none;
   padding-top: 10px;
   padding-bottom: 8px;
@@ -238,5 +238,13 @@ input, textarea {
   
   #submit-button-container{
     margin-top: 0px;
+  }
+  
+  #user-input-container-main{
+    text-align: left;
+  }
+  
+  #search-icon{
+    left: 10px;
   }
 }
