@@ -103,6 +103,7 @@ function sendRequest(url){
 function weatherBackground(cityInput, currentTempInput, highInput, lowInput, humidityInput, conditionsInput, weatherInput, pressureInput, windInput){
 	console.log("weather input: " + weatherInput);
   $(".WeatherBackground").css("width", "0%");
+  $("#weather-background-container").css("filter", "blur(0px)");
   
   if (weatherInput>=200 && weatherInput<= 232){
   	console.log("Weather is: Storm");
