@@ -218,6 +218,7 @@ body{
 #info-container{
   background-color: none;
   text-align: left;
+  padding-right: 5px;
 }
 
 #info-container p{
