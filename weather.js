@@ -1,4 +1,9 @@
-
+//detect if touch screen
+function hasTouch() {
+    return 'ontouchstart' in document.documentElement
+           || navigator.maxTouchPoints > 0
+           || navigator.msMaxTouchPoints > 0;
+};
 
 
 var APPID = "23f36ca1bfadd2adc206be6c15bf9147";
@@ -166,6 +171,14 @@ function weatherBackground(cityInput, currentTempInput, highInput, lowInput, hum
 //getWeather(cityInput);
 
 $(document).ready(function(){
+	//adds HasHover class to body to allow for hovering over elements
+	if (!hasTouch()) {
+		console.log("Not a touch screen, adding hover class!");
+    		$("body").addClass("HasHover");
+	}
+	
+	
+	//return new width upon resize
 	$(window).resize(function() {
   	var width = $(window).width(); 
   	console.log(width);
@@ -197,7 +210,9 @@ $(document).ready(function(){
 	
     $("#submit-button").hover(
   function() {
-    $( this ).css("background-color", "#ffa500");
+    if ($("body").hasClass("HasHover")){
+    	$( this ).css("background-color", "#ffa500");
+    };		  
   }, function() {
     $( this ).css("background-color", "#ffb833");
   }
