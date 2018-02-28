@@ -195,13 +195,13 @@ $(document).ready(function(){
           }
     });*/
 	
-    /*$("#submit-button").hover(
+    $("#submit-button").hover(
   function() {
-    $( this ).css({"background-color": "white", "color": "orange", "border": "2px solid orange"});
+    $( this ).css("background-color", "#ffa500");
   }, function() {
-    $( this ).css({"background-color": "orange", "color": "white", "border": "none"});
+    $( this ).css("background-color", "#ffb833");
   }
-);*/
+);
   
 });
 
