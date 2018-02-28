@@ -134,8 +134,8 @@ body{
   width: 100%;
   max-width: 120px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0);
-  background-color: orange;
+  /*background-color: rgba(255, 255, 255, 0);*/
+  background-color: #ffb833;
   /*border: 2px solid white;*/
   height: 30px;
   cursor: pointer;
