@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-  	<head>
-		<title>JSC Weather</title>	
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-		<link type = 'text/css' rel = 'stylesheet' href = 'stylesheet.css'/>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="weather.js"></script>
-  	</head>
+  <head>
+    <title>JSC Weather</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    <link type = 'text/css' rel = 'stylesheet' href = 'stylesheet.css'/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="weather.js"></script>
+  </head>
  
   <body> 
     <div id="main-container">
@@ -35,22 +35,21 @@
   <!--temp-->
   <div id="output-container-main">
     <div class="OutputContainer" id="city-container">
-      <h1 id="city-name">Columbia</h1>
+      <h1 id="city-name"></h1>
     </div>
     
     <div class="OutputContainer" id="output-container-secondary-flex">
       <div class="OutputFlexVertical" id="current-container">
-        <p id="current-temp">23F</p>
-        <h3 id="current-condition">Thunderstorm</h3>
+        <p id="current-temp"></p>
+        <h3 id="current-condition"></h3>
       </div>
 
       <div class="OutputFlexVertical" id="info-container">
-        <p id="low-temp">Low: 16F</p>
-        <p id="high-temp">High: 50F</p>
-        <p id="humidity">Humidity: 80%
-        </p>
-        <p id="pressure">Pressure: 1018 hPa</p>
-        <p id="wind">Wind Speed: 55 mph</p>
+        <p id="low-temp"></p>
+        <p id="high-temp"></p>
+        <p id="humidity"></p>
+        <p id="pressure"></p>
+        <p id="wind"></p>
       </div>
       
     </div>  
@@ -69,19 +68,12 @@
         <input id="user-input" type="text" placeholder="Enter a U.S. city or zip code" required>
         </div>
             
-      
-      
       <div id="submit-button-container">
         <input type="submit" name="submit" value="Submit" id="submit-button" />
       </div>
-    </form>
-    
-    <!--<div id="submit-button-container">
-      <div id="submit-button"><p id="button-text">Submit</p>
-</div>
-    </div>-->
-    
+    </form>  
   </div>
-</div>  
+	    
+  </div>  
   </body> 
 </html> 
